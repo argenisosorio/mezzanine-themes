@@ -232,7 +232,7 @@ if DJANGO_VERSION < (1, 9):
 ################
 
 INSTALLED_APPS = (
-    "aplicacion",
+    "tema_generico",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
