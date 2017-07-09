@@ -1,4 +1,4 @@
-
+# -*- coding: utf-8 -*-
 from __future__ import absolute_import, unicode_literals
 import os
 
@@ -123,7 +123,7 @@ LANGUAGES = (
 DEBUG = False
 
 # Whether a user's session cookie expires when the Web browser is closed.
-SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+#SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 SITE_ID = 1
 
