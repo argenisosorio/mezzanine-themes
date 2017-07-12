@@ -9,8 +9,52 @@
 {% endblock %}
 
 {% block main %}
-{% blocktrans %}
-<h1>My content</h1>
-<a href="/blog">Posts</a>
-{% endblocktrans %}
+
+  <!-- Recent posts, 5 no more
+  ================================================== -->
+  {% load blog_tags keyword_tags mezzanine_tags i18n %}
+  {% block blog_recent_posts %}
+    {% blog_recent_posts 5 as recent_posts %}
+      {% if recent_posts %}
+      <ul class="list-unstyled recent-posts">
+        {% for recent_post in recent_posts %}
+          <li>
+            {% spaceless %}
+              <div class="">
+                <a href="{{ recent_post.get_absolute_url }}" class="list-group-item-text">
+                  <h3>
+                    {{ recent_post.title }}
+                  </h3>
+                </a>
+                {{ recent_post.publish_date }}
+              </div>
+              <br />
+              <div class="" align="left">
+                {% if settings.BLOG_USE_FEATURED_IMAGE and recent_post.featured_image %}
+                  <img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail recent_post.featured_image 100 100 %}">
+                {% endif %}
+              </div>
+              <br />
+              <div class="text_description">
+                {{ recent_post.description }}
+                <br />
+                <br />
+                <a href="{{ recent_post.get_absolute_url }}" class="list-group-item-text">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                  Read more...
+                </a>
+              </div>
+              ___________________
+            {% endspaceless %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endblock %}
+  <div align="right">
+    <a href="/blog">
+      <span class="glyphicon glyphicon-chevron-right"></span> All posts...
+    </a>
+  </div><!-- End Recent posts, 5 no more -->
+
 {% endblock %}
