@@ -8,7 +8,8 @@ Python==2.7
 ```
 
 ## Themes
-- tema_generico (Default theme for mezzanine)
+- default_theme (Default theme for mezzanine)
+- base_themes (Base from future themes)
 - lightning (Simple and nice theme, blog type, under construction...)
 
 ## Installation
