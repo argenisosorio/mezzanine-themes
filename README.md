@@ -12,6 +12,9 @@ Python==2.7
 - base_themes (Base from future themes)
 - lightning (Simple and nice theme, blog type, under construction...)
 
+## Use theme
+To use each theme it must first be added in the applications installed in the configuration, and you must copy the static folder that the theme brings to the root of the project.
+
 ## Installation
 ```
 # pip install -r requirements.txt
