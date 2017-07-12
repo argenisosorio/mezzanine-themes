@@ -31,7 +31,7 @@
               <br />
               <div class="" align="left">
                 {% if settings.BLOG_USE_FEATURED_IMAGE and recent_post.featured_image %}
-                  <img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail recent_post.featured_image 100 100 %}">
+                  <img class="img-responsive" width="200px" src="{{ MEDIA_URL }}{% thumbnail recent_post.featured_image 50 50 %}">
                 {% endif %}
               </div>
               <br />
@@ -44,7 +44,7 @@
                   Read more...
                 </a>
               </div>
-              ___________________
+              <hr />
             {% endspaceless %}
           </li>
         {% endfor %}
