@@ -94,20 +94,16 @@
         <div class="panel panel-default tree">{% page_menu "pages/menus/tree.html" %}</div>
         {% endblock %}
     </div-->
-    <div class="col-md-8 middle">
+    <div class="col-md-8">
         <div class="well">
             {% block main %}
             {% endblock %}
         </div>
     </div>
-    <div class="col-md-2 right well">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                {% block right_panel %}
-                    <h1>sss</h1>
-                {% endblock %}
-            </div>
-        </div>
+    <div class="col-md-2 well">
+        {% block right_panel %}
+            <h1>sss</h1>
+        {% endblock %}
     </div>
     </div>
 </div><!-- End content -->
