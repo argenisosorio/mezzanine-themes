@@ -232,7 +232,8 @@ if DJANGO_VERSION < (1, 9):
 ################
 
 INSTALLED_APPS = (
-    #"tema_generico",
+    #"default_theme",
+    #"base_themes",
     "lightning",
     "django.contrib.admin",
     "django.contrib.auth",
